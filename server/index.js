@@ -16,11 +16,7 @@ const port = process.env.PORT || 3001;
 const databaseURl = process.env.DATABASH_URL;
 
 app.use(
-    cors({
-        origin: [process.env.ORIGIN],
-        methods: ["GET","POST", "PUT", "PATCH", "DELETE"],
-        credentials: true,
-    })
+    cors()
 )
 
 app.use("/uploads/profile", express.static('uploads/profile'))
